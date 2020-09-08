@@ -56,7 +56,7 @@ const SignUp: React.FC = () => {
                 autoCorrect={false}
                 returnKeyType="next"
                 onSubmitEditing={() => {
-                  emailInputRef.current.focus();
+                  emailInputRef.current?.focus();
                 }}
               />
               <Input
@@ -69,7 +69,7 @@ const SignUp: React.FC = () => {
                 autoCapitalize="none"
                 returnKeyType="next"
                 onSubmitEditing={() => {
-                  passwordInputRef.current.focus();
+                  passwordInputRef.current?.focus();
                 }}
               />
               <Input
@@ -81,13 +81,13 @@ const SignUp: React.FC = () => {
                 textContentType="newPassword"
                 returnKeyType="send"
                 onSubmitEditing={() => {
-                  formRef.current.submitForm();
+                  formRef.current?.submitForm();
                 }}
               />
 
               <Button
                 onPress={() => {
-                  formRef.current.submitForm();
+                  formRef.current?.submitForm();
                 }}
               >
                 Entrar
