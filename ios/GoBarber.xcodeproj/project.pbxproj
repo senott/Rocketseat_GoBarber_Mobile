@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* reactnativetemplateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* reactnativetemplateTests.m */; };
+		00E356F31AD99517003FC87E /* GoBarberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* GoBarberTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -16,10 +16,10 @@
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2DCD954D1E0B4F2C00145EB5 /* reactnativetemplateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* reactnativetemplateTests.m */; };
+		2DCD954D1E0B4F2C00145EB5 /* GoBarberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* GoBarberTests.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		92FE880F403C16275996DA92 /* libPods-reactnativetemplate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE4F8E3F6351AD8035DC969 /* libPods-reactnativetemplate.a */; };
-		96B4348B0DF48C723365C9B6 /* libPods-reactnativetemplate-reactnativetemplateTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AED9B36C44AE4540850FDC36 /* libPods-reactnativetemplate-reactnativetemplateTests.a */; };
+		92FE880F403C16275996DA92 /* libPods-GoBarber.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE4F8E3F6351AD8035DC969 /* libPods-GoBarber.a */; };
+		96B4348B0DF48C723365C9B6 /* libPods-GoBarber-GoBarberTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AED9B36C44AE4540850FDC36 /* libPods-GoBarber-GoBarberTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,39 +28,39 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = reactnativetemplate;
+			remoteInfo = GoBarber;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "reactnativetemplate-tvOS";
+			remoteInfo = "GoBarber-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* reactnativetemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = reactnativetemplateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* GoBarberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoBarberTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* reactnativetemplateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = reactnativetemplateTests.m; sourceTree = "<group>"; };
-		0AFBED6E6BFAD6AEB7000002 /* Pods-reactnativetemplate-reactnativetemplateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactnativetemplate-reactnativetemplateTests.release.xcconfig"; path = "Target Support Files/Pods-reactnativetemplate-reactnativetemplateTests/Pods-reactnativetemplate-reactnativetemplateTests.release.xcconfig"; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* GoBarberTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoBarberTests.m; sourceTree = "<group>"; };
+		0AFBED6E6BFAD6AEB7000002 /* Pods-GoBarber-GoBarberTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoBarber-GoBarberTests.release.xcconfig"; path = "Target Support Files/Pods-GoBarber-GoBarberTests/Pods-GoBarber-GoBarberTests.release.xcconfig"; sourceTree = "<group>"; };
 		0BE0E67971784546AAB9236B /* RobotoSlab-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoSlab-Regular.ttf"; path = "../assets/fonts/RobotoSlab-Regular.ttf"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* reactnativetemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reactnativetemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = reactnativetemplate/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = reactnativetemplate/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = reactnativetemplate/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = reactnativetemplate/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = reactnativetemplate/main.m; sourceTree = "<group>"; };
-		2D02E47B1E0B4A5D006451C7 /* reactnativetemplate-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "reactnativetemplate-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* reactnativetemplate-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "reactnativetemplate-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = reactnativetemplate/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		921EABA75AAB6A9186C513D4 /* Pods-reactnativetemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactnativetemplate.release.xcconfig"; path = "Target Support Files/Pods-reactnativetemplate/Pods-reactnativetemplate.release.xcconfig"; sourceTree = "<group>"; };
-		97631C496D2FC15429F6DAB4 /* Pods-reactnativetemplate-reactnativetemplateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactnativetemplate-reactnativetemplateTests.debug.xcconfig"; path = "Target Support Files/Pods-reactnativetemplate-reactnativetemplateTests/Pods-reactnativetemplate-reactnativetemplateTests.debug.xcconfig"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* GoBarber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoBarber.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = GoBarber/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = GoBarber/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = GoBarber/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = GoBarber/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = GoBarber/main.m; sourceTree = "<group>"; };
+		2D02E47B1E0B4A5D006451C7 /* GoBarber-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GoBarber-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* GoBarber-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GoBarber-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = GoBarber/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		921EABA75AAB6A9186C513D4 /* Pods-GoBarber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoBarber.release.xcconfig"; path = "Target Support Files/Pods-GoBarber/Pods-GoBarber.release.xcconfig"; sourceTree = "<group>"; };
+		97631C496D2FC15429F6DAB4 /* Pods-GoBarber-GoBarberTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoBarber-GoBarberTests.debug.xcconfig"; path = "Target Support Files/Pods-GoBarber-GoBarberTests/Pods-GoBarber-GoBarberTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9AE671F75BA340859C579EBD /* RobotoSlab-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoSlab-Medium.ttf"; path = "../assets/fonts/RobotoSlab-Medium.ttf"; sourceTree = "<group>"; };
-		AED9B36C44AE4540850FDC36 /* libPods-reactnativetemplate-reactnativetemplateTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reactnativetemplate-reactnativetemplateTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CCA6537AB821FA4E465472A9 /* Pods-reactnativetemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactnativetemplate.debug.xcconfig"; path = "Target Support Files/Pods-reactnativetemplate/Pods-reactnativetemplate.debug.xcconfig"; sourceTree = "<group>"; };
-		CCE4F8E3F6351AD8035DC969 /* libPods-reactnativetemplate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reactnativetemplate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AED9B36C44AE4540850FDC36 /* libPods-GoBarber-GoBarberTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GoBarber-GoBarberTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCA6537AB821FA4E465472A9 /* Pods-GoBarber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoBarber.debug.xcconfig"; path = "Target Support Files/Pods-GoBarber/Pods-GoBarber.debug.xcconfig"; sourceTree = "<group>"; };
+		CCE4F8E3F6351AD8035DC969 /* libPods-GoBarber.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GoBarber.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -70,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96B4348B0DF48C723365C9B6 /* libPods-reactnativetemplate-reactnativetemplateTests.a in Frameworks */,
+				96B4348B0DF48C723365C9B6 /* libPods-GoBarber-GoBarberTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92FE880F403C16275996DA92 /* libPods-reactnativetemplate.a in Frameworks */,
+				92FE880F403C16275996DA92 /* libPods-GoBarber.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,13 +99,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* reactnativetemplateTests */ = {
+		00E356EF1AD99517003FC87E /* GoBarberTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* reactnativetemplateTests.m */,
+				00E356F21AD99517003FC87E /* GoBarberTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = reactnativetemplateTests;
+			path = GoBarberTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -116,7 +116,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* reactnativetemplate */ = {
+		13B07FAE1A68108700A75B9A /* GoBarber */ = {
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -127,7 +127,7 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = reactnativetemplate;
+			name = GoBarber;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -135,8 +135,8 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				CCE4F8E3F6351AD8035DC969 /* libPods-reactnativetemplate.a */,
-				AED9B36C44AE4540850FDC36 /* libPods-reactnativetemplate-reactnativetemplateTests.a */,
+				CCE4F8E3F6351AD8035DC969 /* libPods-GoBarber.a */,
+				AED9B36C44AE4540850FDC36 /* libPods-GoBarber-GoBarberTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -144,10 +144,10 @@
 		4069D6453A01F4E77D441F91 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CCA6537AB821FA4E465472A9 /* Pods-reactnativetemplate.debug.xcconfig */,
-				921EABA75AAB6A9186C513D4 /* Pods-reactnativetemplate.release.xcconfig */,
-				97631C496D2FC15429F6DAB4 /* Pods-reactnativetemplate-reactnativetemplateTests.debug.xcconfig */,
-				0AFBED6E6BFAD6AEB7000002 /* Pods-reactnativetemplate-reactnativetemplateTests.release.xcconfig */,
+				CCA6537AB821FA4E465472A9 /* Pods-GoBarber.debug.xcconfig */,
+				921EABA75AAB6A9186C513D4 /* Pods-GoBarber.release.xcconfig */,
+				97631C496D2FC15429F6DAB4 /* Pods-GoBarber-GoBarberTests.debug.xcconfig */,
+				0AFBED6E6BFAD6AEB7000002 /* Pods-GoBarber-GoBarberTests.release.xcconfig */,
 			);
 			name = Pods;
 			path = Pods;
@@ -163,9 +163,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* reactnativetemplate */,
+				13B07FAE1A68108700A75B9A /* GoBarber */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* reactnativetemplateTests */,
+				00E356EF1AD99517003FC87E /* GoBarberTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				4069D6453A01F4E77D441F91 /* Pods */,
@@ -179,10 +179,10 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* reactnativetemplate.app */,
-				00E356EE1AD99517003FC87E /* reactnativetemplateTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* reactnativetemplate-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* reactnativetemplate-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* GoBarber.app */,
+				00E356EE1AD99517003FC87E /* GoBarberTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* GoBarber-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* GoBarber-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -200,9 +200,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* reactnativetemplateTests */ = {
+		00E356ED1AD99517003FC87E /* GoBarberTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "reactnativetemplateTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "GoBarberTests" */;
 			buildPhases = (
 				154AC538C60404BCB4FE3008 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -215,14 +215,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = reactnativetemplateTests;
-			productName = reactnativetemplateTests;
-			productReference = 00E356EE1AD99517003FC87E /* reactnativetemplateTests.xctest */;
+			name = GoBarberTests;
+			productName = GoBarberTests;
+			productReference = 00E356EE1AD99517003FC87E /* GoBarberTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* reactnativetemplate */ = {
+		13B07F861A680F5B00A75B9A /* GoBarber */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "reactnativetemplate" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "GoBarber" */;
 			buildPhases = (
 				3F1CA6F804433EE961FBAA7C /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -236,14 +236,14 @@
 			);
 			dependencies = (
 			);
-			name = reactnativetemplate;
-			productName = reactnativetemplate;
-			productReference = 13B07F961A680F5B00A75B9A /* reactnativetemplate.app */;
+			name = GoBarber;
+			productName = GoBarber;
+			productReference = 13B07F961A680F5B00A75B9A /* GoBarber.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* reactnativetemplate-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* GoBarber-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "reactnativetemplate-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "GoBarber-tvOS" */;
 			buildPhases = (
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
@@ -255,14 +255,14 @@
 			);
 			dependencies = (
 			);
-			name = "reactnativetemplate-tvOS";
-			productName = "reactnativetemplate-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* reactnativetemplate-tvOS.app */;
+			name = "GoBarber-tvOS";
+			productName = "GoBarber-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* GoBarber-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* reactnativetemplate-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* GoBarber-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "reactnativetemplate-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "GoBarber-tvOSTests" */;
 			buildPhases = (
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
@@ -273,9 +273,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "reactnativetemplate-tvOSTests";
-			productName = "reactnativetemplate-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* reactnativetemplate-tvOSTests.xctest */;
+			name = "GoBarber-tvOSTests";
+			productName = "GoBarber-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* GoBarber-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -304,7 +304,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "reactnativetemplate" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "GoBarber" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -317,10 +317,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* reactnativetemplate */,
-				00E356ED1AD99517003FC87E /* reactnativetemplateTests */,
-				2D02E47A1E0B4A5D006451C7 /* reactnativetemplate-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* reactnativetemplate-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* GoBarber */,
+				00E356ED1AD99517003FC87E /* GoBarberTests */,
+				2D02E47A1E0B4A5D006451C7 /* GoBarber-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* GoBarber-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -391,7 +391,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-reactnativetemplate-reactnativetemplateTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-GoBarber-GoBarberTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -427,7 +427,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-reactnativetemplate-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-GoBarber-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -440,7 +440,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-reactnativetemplate/Pods-reactnativetemplate-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-GoBarber/Pods-GoBarber-resources.sh",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
@@ -481,7 +481,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-reactnativetemplate/Pods-reactnativetemplate-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoBarber/Pods-GoBarber-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		93C91A418E5AAD853E71B10E /* [CP] Copy Pods Resources */ = {
@@ -490,7 +490,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-reactnativetemplate-reactnativetemplateTests/Pods-reactnativetemplate-reactnativetemplateTests-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-GoBarber-GoBarberTests/Pods-GoBarber-GoBarberTests-resources.sh",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
@@ -531,7 +531,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-reactnativetemplate-reactnativetemplateTests/Pods-reactnativetemplate-reactnativetemplateTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoBarber-GoBarberTests/Pods-GoBarber-GoBarberTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -579,7 +579,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* reactnativetemplateTests.m in Sources */,
+				00E356F31AD99517003FC87E /* GoBarberTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,7 +605,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* reactnativetemplateTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* GoBarberTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,12 +614,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* reactnativetemplate */;
+			target = 13B07F861A680F5B00A75B9A /* GoBarber */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* reactnativetemplate-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* GoBarber-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -627,14 +627,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 97631C496D2FC15429F6DAB4 /* Pods-reactnativetemplate-reactnativetemplateTests.debug.xcconfig */;
+			baseConfigurationReference = 97631C496D2FC15429F6DAB4 /* Pods-GoBarber-GoBarberTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = reactnativetemplateTests/Info.plist;
+				INFOPLIST_FILE = GoBarberTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -644,17 +644,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/reactnativetemplate.app/reactnativetemplate";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoBarber.app/GoBarber";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0AFBED6E6BFAD6AEB7000002 /* Pods-reactnativetemplate-reactnativetemplateTests.release.xcconfig */;
+			baseConfigurationReference = 0AFBED6E6BFAD6AEB7000002 /* Pods-GoBarber-GoBarberTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = reactnativetemplateTests/Info.plist;
+				INFOPLIST_FILE = GoBarberTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -664,19 +664,19 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/reactnativetemplate.app/reactnativetemplate";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoBarber.app/GoBarber";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CCA6537AB821FA4E465472A9 /* Pods-reactnativetemplate.debug.xcconfig */;
+			baseConfigurationReference = CCA6537AB821FA4E465472A9 /* Pods-GoBarber.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = reactnativetemplate/Info.plist;
+				INFOPLIST_FILE = GoBarber/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -684,7 +684,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = reactnativetemplate;
+				PRODUCT_NAME = GoBarber;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -693,12 +693,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 921EABA75AAB6A9186C513D4 /* Pods-reactnativetemplate.release.xcconfig */;
+			baseConfigurationReference = 921EABA75AAB6A9186C513D4 /* Pods-GoBarber.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = reactnativetemplate/Info.plist;
+				INFOPLIST_FILE = GoBarber/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -706,7 +706,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = reactnativetemplate;
+				PRODUCT_NAME = GoBarber;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -724,14 +724,14 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "reactnativetemplate-tvOS/Info.plist";
+				INFOPLIST_FILE = "GoBarber-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.reactnativetemplate-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.GoBarber-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -751,14 +751,14 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "reactnativetemplate-tvOS/Info.plist";
+				INFOPLIST_FILE = "GoBarber-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.reactnativetemplate-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.GoBarber-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -777,17 +777,17 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "reactnativetemplate-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "GoBarber-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.reactnativetemplate-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.GoBarber-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/reactnativetemplate-tvOS.app/reactnativetemplate-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoBarber-tvOS.app/GoBarber-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
@@ -803,17 +803,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "reactnativetemplate-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "GoBarber-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.reactnativetemplate-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.GoBarber-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/reactnativetemplate-tvOS.app/reactnativetemplate-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoBarber-tvOS.app/GoBarber-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -934,7 +934,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "reactnativetemplateTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "GoBarberTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -943,7 +943,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "reactnativetemplate" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "GoBarber" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -952,7 +952,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "reactnativetemplate-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "GoBarber-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -961,7 +961,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "reactnativetemplate-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "GoBarber-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -970,7 +970,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "reactnativetemplate" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "GoBarber" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

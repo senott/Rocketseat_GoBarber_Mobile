@@ -7,11 +7,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface reactnativetemplateTests : XCTestCase
+@interface GoBarberTests : XCTestCase
 
 @end
 
-@implementation reactnativetemplateTests
+@implementation GoBarberTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL(^)(UIView *view))test
 {
