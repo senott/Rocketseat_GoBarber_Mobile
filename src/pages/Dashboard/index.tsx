@@ -1,6 +1,7 @@
 /* eslint-disable camelcase */
 import { useNavigation } from '@react-navigation/native';
 import React, { useCallback, useEffect, useState } from 'react';
+import Icon from 'react-native-vector-icons/Feather';
 
 import { useAuth } from '../../hooks/auth';
 import api from '../../services/api';
@@ -13,9 +14,16 @@ import {
   ProfileButton,
   UserAvatar,
   ProvidersList,
+  ProviderContainer,
+  ProviderAvatar,
+  ProviderInfo,
+  ProviderName,
+  ProviderMeta,
+  ProviderMetaText,
+  ProvidersListTitle,
 } from './styles';
 
-interface Provider {
+export interface Provider {
   id: string;
   name: string;
   avatar_url: string;
@@ -31,6 +39,13 @@ const Dashboard: React.FC = () => {
   const navigateToProfile = useCallback(() => {
     navigate('Profile');
   }, [navigate]);
+
+  const navigateToCreateAppointment = useCallback(
+    (providerId: string) => {
+      navigate('CreateAppointment', { providerId });
+    },
+    [navigate],
+  );
 
   useEffect(() => {
     api.get('/providers').then(response => {
@@ -53,8 +68,29 @@ const Dashboard: React.FC = () => {
       </Header>
 
       <ProvidersList
+        ListHeaderComponent={
+          <ProvidersListTitle>Cabeleireiros</ProvidersListTitle>
+        }
         data={providers}
-        renderItem={({ item }) => <UserName>{item.name}</UserName>}
+        renderItem={({ item: provider }) => (
+          <ProviderContainer
+            onPress={() => navigateToCreateAppointment(provider.id)}
+          >
+            <ProviderAvatar source={{ uri: provider.avatar_url }} />
+
+            <ProviderInfo>
+              <ProviderName>{provider.name}</ProviderName>
+              <ProviderMeta>
+                <Icon name="calendar" size={14} color="#ff9000" />
+                <ProviderMetaText>Segunda à sexta</ProviderMetaText>
+              </ProviderMeta>
+              <ProviderMeta>
+                <Icon name="clock" size={14} color="#ff9000" />
+                <ProviderMetaText>8:00 às 18:00</ProviderMetaText>
+              </ProviderMeta>
+            </ProviderInfo>
+          </ProviderContainer>
+        )}
         keyExtractor={provider => provider.id}
       />
     </Container>
