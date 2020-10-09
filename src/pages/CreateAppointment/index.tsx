@@ -1,8 +1,9 @@
 /* eslint-disable camelcase */
 import { useNavigation, useRoute } from '@react-navigation/native';
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import Icon from 'react-native-vector-icons/Feather';
 import DateTimePicker from '@react-native-community/datetimepicker';
+import { format } from 'date-fns';
 
 import { Platform } from 'react-native';
 import { useAuth } from '../../hooks/auth';
@@ -49,6 +50,30 @@ const CreateAppointment: React.FC = () => {
   const [showDatePicker, setShowDatePicker] = useState(false);
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [availableHours, setAvailableHours] = useState<AvailableHour[]>([]);
+
+  const morningAvailableHours = useMemo(() => {
+    return availableHours
+      .filter(({ hour }) => hour < 12)
+      .map(({ hour, available }) => {
+        return {
+          hour,
+          available,
+          formattedHour: format(new Date().setHours(hour), 'HH:00'),
+        };
+      });
+  }, [availableHours]);
+
+  const afternoonAvailableHours = useMemo(() => {
+    return availableHours
+      .filter(({ hour }) => hour >= 12)
+      .map(({ hour, available }) => {
+        return {
+          hour,
+          available,
+          formattedHour: format(new Date().setHours(hour), 'HH:00'),
+        };
+      });
+  }, [availableHours]);
 
   const { user } = useAuth();
 
@@ -141,6 +166,14 @@ const CreateAppointment: React.FC = () => {
           />
         )}
       </Calendar>
+
+      {morningAvailableHours.map(({ formattedHour, available }) => (
+        <Title key={formattedHour}>{`${formattedHour} - ${available}`}</Title>
+      ))}
+
+      {afternoonAvailableHours.map(({ formattedHour, available }) => (
+        <Title key={formattedHour}>{`${formattedHour} - ${available}`}</Title>
+      ))}
     </Container>
   );
 };
