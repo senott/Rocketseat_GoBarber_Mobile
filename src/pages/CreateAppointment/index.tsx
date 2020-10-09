@@ -35,14 +35,20 @@ export interface Provider {
   avatar_url: string;
 }
 
+interface AvailableHour {
+  hour: number;
+  available: boolean;
+}
+
 const CreateAppointment: React.FC = () => {
   const route = useRoute();
   const { providerId } = route.params as RouteParams;
 
   const [providers, setProviders] = useState<Provider[]>([]);
-  const [selectedProvider, setSelectedprovider] = useState(providerId);
+  const [selectedProvider, setSelectedProvider] = useState(providerId);
   const [showDatePicker, setShowDatePicker] = useState(false);
   const [selectedDate, setSelectedDate] = useState(new Date());
+  const [availableHours, setAvailableHours] = useState<AvailableHour[]>([]);
 
   const { user } = useAuth();
 
@@ -58,8 +64,22 @@ const CreateAppointment: React.FC = () => {
     });
   }, []);
 
-  const handleSelectprovider = useCallback((id: string) => {
-    setSelectedprovider(id);
+  useEffect(() => {
+    api
+      .get(`/providers/${selectedProvider}/available-hours`, {
+        params: {
+          year: selectedDate.getFullYear(),
+          month: selectedDate.getMonth() + 1,
+          day: selectedDate.getDate(),
+        },
+      })
+      .then(response => {
+        setAvailableHours(response.data);
+      });
+  }, [selectedDate, selectedProvider]);
+
+  const handleSelectedProvider = useCallback((id: string) => {
+    setSelectedProvider(id);
   }, []);
 
   const handleToggleDatePicker = useCallback(() => {
@@ -95,7 +115,7 @@ const CreateAppointment: React.FC = () => {
           renderItem={({ item: provider }) => (
             <ProviderContainer
               selected={provider.id === selectedProvider}
-              onPress={() => handleSelectprovider(provider.id)}
+              onPress={() => handleSelectedProvider(provider.id)}
             >
               <ProviderAvatar source={{ uri: provider.avatar_url }} />
               <ProviderName selected={provider.id === selectedProvider}>
