@@ -1,5 +1,7 @@
+/* eslint-disable import/no-duplicates */
 import { useNavigation, useRoute } from '@react-navigation/native';
-import ptBr, { format } from 'date-fns';
+import { format } from 'date-fns';
+import ptBR from 'date-fns/locale/pt-BR';
 import React, { useCallback, useMemo } from 'react';
 import Icon from 'react-native-vector-icons/Feather';
 
@@ -26,7 +28,7 @@ const AppointmentCreated: React.FC = () => {
       routeParams.date,
       "EEEE', dia' dd 'de' MMMM 'de' yyyy 'às' HH:mm",
       {
-        locale: ptBr,
+        locale: ptBR,
       },
     );
   }, [routeParams.date]);
