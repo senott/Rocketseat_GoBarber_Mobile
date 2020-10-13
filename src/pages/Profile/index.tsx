@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 /* eslint-disable no-unused-expressions */
 import React, { useRef, useCallback } from 'react';
 import {
@@ -14,6 +15,7 @@ import { useNavigation } from '@react-navigation/native';
 import { Form } from '@unform/mobile';
 import { FormHandles } from '@unform/core';
 import * as Yup from 'yup';
+import ImagePicker from 'react-native-image-picker';
 
 import getValidationErrors from '../../utils/getValidationErrors';
 import api from '../../services/api';
@@ -27,17 +29,21 @@ import {
   UserAvatarButton,
   UserAvatar,
   BackButton,
+  SignoutButton,
+  ButtonContainer,
 } from './styles';
 import { useAuth } from '../../hooks/auth';
 
 interface SignUpFormData {
   name: string;
   email: string;
+  current_password: string;
   password: string;
+  password_confirmation: string;
 }
 
 const Profile: React.FC = () => {
-  const { user } = useAuth();
+  const { user, updateUser, signOut } = useAuth();
   const formRef = useRef<FormHandles>(null);
   const emailInputRef = useRef<TextInput>(null);
 
@@ -57,17 +63,41 @@ const Profile: React.FC = () => {
           email: Yup.string()
             .required('E-mail obrigatório')
             .email('Digite um e-mail válido'),
-          password: Yup.string().min(6, 'No mínimo 6 dígitos'),
+          current_password: Yup.string(),
+          password: Yup.string().when('current_password', {
+            is: val => !!val.length,
+            then: Yup.string().min(6, 'No mínimo 6 dígitos'),
+            otherwise: Yup.string().min(0),
+          }),
+          password_confirmation: Yup.string().oneOf(
+            [Yup.ref('password')],
+            'Senhas digitadas não são iguais.',
+          ),
         });
 
         await schema.validate(data, { abortEarly: false });
 
-        await api.post('/users', data);
+        const {
+          name,
+          email,
+          current_password,
+          password,
+          password_confirmation,
+        } = data;
 
-        Alert.alert(
-          'Cadastro realizado com sucesso',
-          'Você já pode fazer login na aplicação.',
-        );
+        const formData = {
+          name,
+          email,
+          ...(current_password
+            ? { current_password, password, password_confirmation }
+            : {}),
+        };
+
+        const response = await api.put('/profile', formData);
+
+        updateUser(response.data.user);
+
+        Alert.alert('Perfil atualizado com sucesso');
 
         navigation.goBack();
       } catch (err) {
@@ -78,23 +108,72 @@ const Profile: React.FC = () => {
         }
 
         Alert.alert(
-          'Erro no cadastro',
-          'Ocorreu um erro ao cadastrar o usuário, verifique as informações enviadas.',
+          'Erro na atualização do perfil',
+          'Ocorreu um erro ao atualizar o perfil, verifique as informações enviadas.',
         );
       }
     },
-    [navigation],
+    [navigation, updateUser],
   );
 
   const handleGoBack = useCallback(() => {
     navigation.goBack();
   }, [navigation]);
 
+  const handleSignOut = useCallback(() => {
+    signOut();
+  }, []);
+
+  const handleUpdateAvatar = useCallback(() => {
+    ImagePicker.showImagePicker(
+      {
+        title: 'Selecione um avatar',
+        cancelButtonTitle: 'Cancelar',
+        takePhotoButtonTitle: 'Usar câmera',
+        chooseFromLibraryButtonTitle: 'Escolher da galeria',
+        storageOptions: {
+          skipBackup: true,
+          path: 'images',
+          cameraRoll: true,
+          waitUntilSaved: true,
+        },
+      },
+      response => {
+        if (response.didCancel) {
+          return;
+        }
+
+        if (response.error) {
+          Alert.alert('Erro ao atualizar seu avatar.');
+          return;
+        }
+
+        const data = new FormData();
+
+        let path = response.uri;
+
+        if (Platform.OS === 'ios') {
+          path = `~${path.substring(path.indexOf('/Documents'))}`;
+        }
+
+        data.append('avatar', {
+          uri: path,
+          type: 'image/jpeg',
+          name: `${user.id}.jpg`,
+        });
+
+        api.patch('/users/avatar', data).then(apiResponse => {
+          updateUser(apiResponse.data.user);
+        });
+      },
+    );
+  }, [updateUser, user.id]);
+
   return (
     <>
       <KeyboardAvoidingView
         style={{ flex: 1 }}
-        behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         enabled
       >
         <ScrollView
@@ -102,10 +181,16 @@ const Profile: React.FC = () => {
           keyboardShouldPersistTaps="handled"
         >
           <Container>
-            <BackButton onPress={handleGoBack}>
-              <Icon name="chevron-left" size={24} color="#999591" />
-            </BackButton>
-            <UserAvatarButton>
+            <ButtonContainer>
+              <BackButton onPress={handleGoBack}>
+                <Icon name="chevron-left" size={24} color="#999591" />
+              </BackButton>
+              <SignoutButton onPress={handleSignOut}>
+                <Icon name="log-out" size={24} color="#999591" />
+              </SignoutButton>
+            </ButtonContainer>
+
+            <UserAvatarButton onPress={handleUpdateAvatar}>
               <UserAvatar source={{ uri: user.avatar_url }} />
             </UserAvatarButton>
             <View>
@@ -113,6 +198,7 @@ const Profile: React.FC = () => {
             </View>
 
             <Form
+              initialData={user}
               ref={formRef}
               onSubmit={handleSignUp}
               style={{ width: '100%' }}

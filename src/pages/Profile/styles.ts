@@ -1,12 +1,11 @@
 import styled from 'styled-components/native';
-import { getBottomSpace } from 'react-native-iphone-x-helper';
 import { Platform } from 'react-native';
 
 export const Container = styled.View`
   flex: 1;
   justify-content: center;
-  padding: 0 30px ${Platform.OS === 'android' ? 150 : 40}px;
-  position: relative;
+  padding: ${Platform.OS === 'android' ? 170 : 0}px 30px
+    ${Platform.OS === 'android' ? 150 : 40}px;
 `;
 
 export const Title = styled.Text`
@@ -25,6 +24,17 @@ export const UserAvatar = styled.Image`
   align-self: center;
 `;
 
-export const BackButton = styled.TouchableOpacity`
-  margin-top: 32px;
+export const ButtonContainer = styled.View`
+  flex-direction: row;
 `;
+ButtonContainer.displayName = 'ButtonContainer';
+
+export const BackButton = styled.TouchableOpacity`
+  margin-right: auto;
+`;
+BackButton.displayName = 'BackButton';
+
+export const SignoutButton = styled.TouchableOpacity`
+  margin-left: auto;
+`;
+SignoutButton.displayName = 'SignoutButton';
