@@ -5,7 +5,7 @@ import { act } from 'react-test-renderer';
 
 import ForgotPassword from '../../pages/ForgotPassword';
 
-const mockedSignIn = jest.fn();
+const mockedForgotPassword = jest.fn();
 const mockedAlert = jest.spyOn(Alert, 'alert');
 const mockedNavigate = jest.fn();
 
@@ -15,13 +15,15 @@ jest.mock('@react-navigation/native', () => {
   };
 });
 
-jest.mock('../../hooks/auth', () => {
-  return { useAuth: () => ({ signIn: mockedSignIn }) };
+jest.mock('../../services/api', () => {
+  return {
+    post: () => mockedForgotPassword(),
+  };
 });
 
 describe('Forgot Password Page', () => {
   beforeEach(() => {
-    mockedSignIn.mockClear();
+    mockedForgotPassword.mockClear();
     mockedAlert.mockClear();
     mockedNavigate.mockClear();
   });
@@ -33,43 +35,38 @@ describe('Forgot Password Page', () => {
     expect(getByText('Recuperar senha')).toBeTruthy();
   });
 
-  /*   it('should be able to sign in', async () => {
-    const { getByPlaceholder, getByText } = render(<SignIn />);
+  it('should be able to request password reset', async () => {
+    const { getByPlaceholder, getByText } = render(<ForgotPassword />);
 
     const emailInput = getByPlaceholder('E-mail');
-    const passwordInput = getByPlaceholder('Senha');
-    const buttonElement = getByText('Entrar');
+    const buttonElement = getByText('Recuperar senha');
 
     act(() => {
       fireEvent.changeText(emailInput, 'johndoe@example.com');
-      fireEvent.changeText(passwordInput, '123456');
       fireEvent.press(buttonElement);
     });
 
     await waitFor(() => {
-      expect(mockedSignIn).toHaveBeenCalledTimes(1);
+      expect(mockedForgotPassword).toHaveBeenCalledTimes(1);
     });
   });
 
   it('should be able to navigate and sign in by going to next element', async () => {
-    const { getByPlaceholder } = render(<SignIn />);
+    const { getByPlaceholder } = render(<ForgotPassword />);
 
     const emailInput = getByPlaceholder('E-mail');
-    const passwordInput = getByPlaceholder('Senha');
 
     act(() => {
       fireEvent.changeText(emailInput, 'johndoe@example.com');
       fireEvent(emailInput, 'onSubmitEditing');
-      fireEvent.changeText(passwordInput, '123456');
-      fireEvent(passwordInput, 'onSubmitEditing');
     });
 
     await waitFor(() => {
-      expect(mockedSignIn).toHaveBeenCalledTimes(1);
+      expect(mockedForgotPassword).toHaveBeenCalledTimes(1);
     });
   });
 
-  it('should not be able to sign in with invalid email', async () => {
+  /* it('should not be able to sign in with invalid email', async () => {
     const { getByPlaceholder, getByText } = render(<SignIn />);
 
     const emailInput = getByPlaceholder('E-mail');

@@ -20,7 +20,7 @@ import Input from '../../components/Input';
 import Button from '../../components/Button';
 
 import getValidationErrors from '../../utils/getValidationErrors';
-import { useAuth } from '../../hooks/auth';
+import api from '../../services/api';
 
 import {
   Container,
@@ -29,19 +29,16 @@ import {
   BackToSignInButtonText,
 } from './styles';
 
-interface SignInFormData {
+interface ForgotPasswordFormData {
   email: string;
-  password: string;
 }
 
 const ForgotPassword: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
   const navigation = useNavigation();
 
-  const { signIn } = useAuth();
-
   const handleForgotPassword = useCallback(
-    async (data: SignInFormData) => {
+    async (data: ForgotPasswordFormData) => {
       try {
         formRef.current?.setErrors({});
 
@@ -49,15 +46,16 @@ const ForgotPassword: React.FC = () => {
           email: Yup.string()
             .required('E-mail obrigatório')
             .email('Digite um e-mail válido'),
-          password: Yup.string().required('Senha obrigatória'),
         });
 
         await schema.validate(data, { abortEarly: false });
 
-        await signIn({
-          email: data.email,
-          password: data.password,
-        });
+        await api.post('/password/forgot', { email: data.email });
+
+        Alert.alert(
+          'Recuperação de senha',
+          'E-mail de recuperação de senha enviado com sucesso.',
+        );
       } catch (err) {
         if (err instanceof Yup.ValidationError) {
           const errors = getValidationErrors(err);
@@ -71,7 +69,7 @@ const ForgotPassword: React.FC = () => {
         );
       }
     },
-    [signIn],
+    [],
   );
 
   return (
