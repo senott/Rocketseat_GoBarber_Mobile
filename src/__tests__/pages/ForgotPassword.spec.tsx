@@ -66,25 +66,23 @@ describe('Forgot Password Page', () => {
     });
   });
 
-  /* it('should not be able to sign in with invalid email', async () => {
-    const { getByPlaceholder, getByText } = render(<SignIn />);
+  it('should not be able to reset password with invalid email', async () => {
+    const { getByPlaceholder, getByText } = render(<ForgotPassword />);
 
     const emailInput = getByPlaceholder('E-mail');
-    const passwordInput = getByPlaceholder('Senha');
-    const buttonElement = getByText('Entrar');
+    const buttonElement = getByText('Recuperar senha');
 
     act(() => {
       fireEvent.changeText(emailInput, 'invalid-email');
-      fireEvent.changeText(passwordInput, '123456');
       fireEvent.press(buttonElement);
     });
 
     await waitFor(() => {
-      expect(mockedSignIn).not.toHaveBeenCalled();
+      expect(mockedForgotPassword).not.toHaveBeenCalled();
     });
   });
 
-  it('should display error when login fails', async () => {
+  /* it('should display error when login fails', async () => {
     mockedSignIn.mockImplementation(() => {
       throw new Error();
     });
