@@ -11,7 +11,7 @@ const mockedNavigate = jest.fn();
 
 jest.mock('@react-navigation/native', () => {
   return {
-    useNavigation: () => ({ navigate: mockedNavigate }),
+    useNavigation: () => ({ goBack: mockedNavigate }),
   };
 });
 
@@ -102,16 +102,15 @@ describe('Forgot Password Page', () => {
     });
   });
 
-  /* it('should be able to navigate to sign up page', async () => {
-    const { getByText } = render(<SignIn />);
+  it('should be able to navigate to sign in page', async () => {
+    const { getByText } = render(<ForgotPassword />);
 
-    const createAccountButton = getByText('Criar conta');
+    const createAccountButton = getByText('Voltar para logon');
 
     fireEvent.press(createAccountButton);
 
     await waitFor(() => {
-      expect(mockedNavigate).toHaveBeenCalledWith('SignUp');
+      expect(mockedNavigate).toHaveBeenCalledTimes(1);
     });
   });
- */
 });
