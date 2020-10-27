@@ -134,6 +134,7 @@ const SignIn: React.FC = () => {
 
             <ForgotPassword
               onPress={() => {
+                // TODO: implement forgot password page!!!
                 console.log('esqueceu');
               }}
             >

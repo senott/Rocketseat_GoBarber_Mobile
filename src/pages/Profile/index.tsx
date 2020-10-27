@@ -2,7 +2,6 @@
 /* eslint-disable no-unused-expressions */
 import React, { useRef, useCallback } from 'react';
 import {
-  Image,
   View,
   KeyboardAvoidingView,
   Platform,
