@@ -82,20 +82,18 @@ describe('Forgot Password Page', () => {
     });
   });
 
-  /* it('should display error when login fails', async () => {
-    mockedSignIn.mockImplementation(() => {
+  it('should display error when reset password fails', async () => {
+    mockedForgotPassword.mockImplementation(() => {
       throw new Error();
     });
 
-    const { getByPlaceholder, getByText } = render(<SignIn />);
+    const { getByPlaceholder, getByText } = render(<ForgotPassword />);
 
     const emailInput = getByPlaceholder('E-mail');
-    const passwordInput = getByPlaceholder('Senha');
-    const buttonElement = getByText('Entrar');
+    const buttonElement = getByText('Recuperar senha');
 
     act(() => {
       fireEvent.changeText(emailInput, 'johndoe@example.com');
-      fireEvent.changeText(passwordInput, '123456');
       fireEvent.press(buttonElement);
     });
 
@@ -104,7 +102,7 @@ describe('Forgot Password Page', () => {
     });
   });
 
-  it('should be able to navigate to sign up page', async () => {
+  /* it('should be able to navigate to sign up page', async () => {
     const { getByText } = render(<SignIn />);
 
     const createAccountButton = getByText('Criar conta');
