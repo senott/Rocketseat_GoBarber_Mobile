@@ -121,4 +121,16 @@ describe('SigIn Page', () => {
       expect(mockedNavigate).toHaveBeenCalledWith('SignUp');
     });
   });
+
+  it('should be able to navigate to forgot password page', async () => {
+    const { getByText } = render(<SignIn />);
+
+    const forgotPasswordButton = getByText('Esqueci a senha');
+
+    fireEvent.press(forgotPasswordButton);
+
+    await waitFor(() => {
+      expect(mockedNavigate).toHaveBeenCalledWith('ForgotPassword');
+    });
+  });
 });
