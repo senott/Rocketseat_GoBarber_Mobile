@@ -17,7 +17,7 @@ import { Container, TextInput, Icon } from './styles';
 interface InputProps extends TextInputProps {
   name: string;
   icon: string;
-  containerStyle?: {};
+  containerStyle?: never;
 }
 
 interface InputValueReference {
@@ -28,7 +28,7 @@ interface InputRef {
   focus(): void;
 }
 
-const Input: React.RefForwardingComponent<InputRef, InputProps> = (
+const Input: React.ForwardRefRenderFunction<InputRef, InputProps> = (
   { name, icon, containerStyle = {}, ...rest },
   ref,
 ) => {
@@ -40,8 +40,11 @@ const Input: React.RefForwardingComponent<InputRef, InputProps> = (
     },
   }));
 
-  const [isFocused, setIsFocused] = useState(null);
-  const [isFilled, setIsFilled] = useState(null);
+  const [isFocused, setIsFocused] = useState(false);
+  const [isFilled, setIsFilled] = useState(false);
+
+  const { registerField, defaultValue = '', fieldName, error } = useField(name);
+  const inputValueRef = useRef<InputValueReference>({ value: defaultValue });
 
   const handleInputFocus = useCallback(() => {
     setIsFocused(true);
@@ -53,15 +56,12 @@ const Input: React.RefForwardingComponent<InputRef, InputProps> = (
     setIsFilled(!!inputValueRef.current.value);
   }, []);
 
-  const { registerField, defaultValue = '', fieldName, error } = useField(name);
-  const inputValueRef = useRef<InputValueReference>({ value: defaultValue });
-
   useEffect(() => {
     registerField({
       name: fieldName,
       ref: inputValueRef.current,
       path: 'value',
-      setValue(ref: any, value: string) {
+      setValue(reference: unknown, value: string) {
         inputValueRef.current.value = value;
         inputElementRef.current.setNativeProps({ text: value });
       },
@@ -73,11 +73,17 @@ const Input: React.RefForwardingComponent<InputRef, InputProps> = (
   }, [fieldName, registerField]);
 
   return (
-    <Container style={containerStyle} isFocused={isFocused} hasError={!!error}>
+    <Container
+      style={containerStyle}
+      isFocused={isFocused}
+      hasError={!!error}
+      testID={`input-${name}`}
+    >
       <Icon
         name={icon}
         size={20}
         color={isFocused || isFilled ? '#ff9000' : '#666360'}
+        testID={`input-${name}-icon`}
       />
       <TextInput
         ref={inputElementRef}
