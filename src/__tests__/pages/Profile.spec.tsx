@@ -129,7 +129,7 @@ describe('Profile Page', () => {
       },
     });
 
-    const { getByPlaceholder, getByText } = render(<Profile />);
+    const { getByPlaceholder } = render(<Profile />);
 
     const nameField = getByPlaceholder('Nome');
     const emailField = getByPlaceholder('E-mail');
