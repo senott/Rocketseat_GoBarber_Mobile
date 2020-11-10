@@ -1,5 +1,5 @@
 import React from 'react';
-import { Alert } from 'react-native';
+import { Alert, Platform } from 'react-native';
 import { fireEvent, render, waitFor } from 'react-native-testing-library';
 import { act } from 'react-test-renderer';
 
@@ -27,6 +27,16 @@ describe('SigIn Page', () => {
   });
 
   it('should contain email, password and button components', () => {
+    const { getByPlaceholder, getByText } = render(<SignIn />);
+
+    expect(getByPlaceholder('E-mail')).toBeTruthy();
+    expect(getByPlaceholder('Senha')).toBeTruthy();
+    expect(getByText('Entrar')).toBeTruthy();
+  });
+
+  it('should contain email, password and button components on Android', () => {
+    Platform.OS = 'android';
+
     const { getByPlaceholder, getByText } = render(<SignIn />);
 
     expect(getByPlaceholder('E-mail')).toBeTruthy();

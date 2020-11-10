@@ -1,5 +1,5 @@
 import React from 'react';
-import { Alert } from 'react-native';
+import { Alert, Platform } from 'react-native';
 import { fireEvent, render, waitFor } from 'react-native-testing-library';
 import { act } from 'react-test-renderer';
 
@@ -29,6 +29,15 @@ describe('Forgot Password Page', () => {
   });
 
   it('should contain email and button components', () => {
+    const { getByPlaceholder, getByText } = render(<ForgotPassword />);
+
+    expect(getByPlaceholder('E-mail')).toBeTruthy();
+    expect(getByText('Recuperar senha')).toBeTruthy();
+  });
+
+  it('should contain email and button components on Android', () => {
+    Platform.OS = 'android';
+
     const { getByPlaceholder, getByText } = render(<ForgotPassword />);
 
     expect(getByPlaceholder('E-mail')).toBeTruthy();

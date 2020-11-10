@@ -65,13 +65,16 @@ const Profile: React.FC = () => {
           current_password: Yup.string(),
           password: Yup.string().when('current_password', {
             is: val => !!val.length,
-            then: Yup.string().min(6, 'No mínimo 6 dígitos'),
+            then: Yup.string().min(6, 'No mínimo 6 dígitos').required(),
             otherwise: Yup.string().min(0),
           }),
-          password_confirmation: Yup.string().oneOf(
-            [Yup.ref('password')],
-            'Senhas digitadas não são iguais.',
-          ),
+          password_confirmation: Yup.string().when('password', {
+            is: val => !!val.length,
+            then: Yup.string()
+              .oneOf([Yup.ref('password')], 'Senhas digitadas não são iguais.')
+              .required(),
+            otherwise: Yup.string().min(0),
+          }),
         });
 
         await schema.validate(data, { abortEarly: false });
@@ -181,15 +184,15 @@ const Profile: React.FC = () => {
         >
           <Container>
             <ButtonContainer>
-              <BackButton onPress={handleGoBack}>
+              <BackButton onPress={handleGoBack} testID="backButton">
                 <Icon name="chevron-left" size={24} color="#999591" />
               </BackButton>
-              <SignoutButton onPress={handleSignOut}>
+              <SignoutButton onPress={handleSignOut} testID="signOutButton">
                 <Icon name="log-out" size={24} color="#999591" />
               </SignoutButton>
             </ButtonContainer>
 
-            <UserAvatarButton onPress={handleUpdateAvatar}>
+            <UserAvatarButton onPress={handleUpdateAvatar} testID="avatar">
               <UserAvatar source={{ uri: user.avatar_url }} />
             </UserAvatarButton>
             <View>

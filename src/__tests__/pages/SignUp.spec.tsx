@@ -1,5 +1,5 @@
 import React from 'react';
-import { Alert } from 'react-native';
+import { Alert, Platform } from 'react-native';
 import { render, fireEvent, waitFor, act } from 'react-native-testing-library';
 import SignUp from '../../pages/SignUp';
 
@@ -24,6 +24,26 @@ describe('SignUp Page', () => {
     mockedUsersPost.mockClear();
     mockedGoBack.mockClear();
     mockedAlert.mockClear();
+  });
+
+  it('should contain email, password and button components', () => {
+    const { getByPlaceholder, getByText } = render(<SignUp />);
+
+    expect(getByPlaceholder('Nome')).toBeTruthy();
+    expect(getByPlaceholder('E-mail')).toBeTruthy();
+    expect(getByPlaceholder('Senha')).toBeTruthy();
+    expect(getByText('Cadastrar')).toBeTruthy();
+  });
+
+  it('should contain email, password and button components on Android', () => {
+    Platform.OS = 'android';
+
+    const { getByPlaceholder, getByText } = render(<SignUp />);
+
+    expect(getByPlaceholder('Nome')).toBeTruthy();
+    expect(getByPlaceholder('E-mail')).toBeTruthy();
+    expect(getByPlaceholder('Senha')).toBeTruthy();
+    expect(getByText('Cadastrar')).toBeTruthy();
   });
 
   it('should be able to sign up', async () => {
